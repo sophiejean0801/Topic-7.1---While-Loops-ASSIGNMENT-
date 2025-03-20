@@ -50,8 +50,9 @@
                 }
                 if (points == 0)
                 {
-                    Console.WriteLine("You have no points left. You loser. See you never!");
+                    Console.WriteLine("You loser. See you never!");
                     done = true;
+                    break;
                 }
                 Console.WriteLine("Would you like to continue?");
                 if (Console.ReadLine() == "no")
@@ -63,26 +64,7 @@
                 {
                     done = false;
                 }
-                while (done == true)
-                {
-                    Console.WriteLine("You have " + points + " points. Would you like to play again?");
-                    if (points == 0)
-                    {
-                        done = true;
-                        Console.WriteLine("You have no points left. You loser. See you never!");
-                    }
-                    if (Console.ReadLine() == "yes")
-                    {
-                        done = false;
-                        points = 3;
-                        Console.WriteLine("Welcome back to the worst casino! You will be playing a game of chance. ");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Coward. You have " + points + " points. See you never!");
-                        done = true;
-                    }
-                }
+                
 
 
 
