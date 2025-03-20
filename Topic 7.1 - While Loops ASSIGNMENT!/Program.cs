@@ -14,7 +14,7 @@
             // heads is 0 and tails is 1... I think
 
 
-            Console.WriteLine("Welcome to the worst casino! You will be playing a game of chance. ");
+            Console.WriteLine("Welcome to the worst casino! You will be playing a game of chance. You start with three points.");
             while (!done)
             {
                 Console.WriteLine("Enter heads or tails");
@@ -24,11 +24,13 @@
                 if (guess == "heads" && flip == 0)
                 {
                     Console.WriteLine("The coin landed on heads! You win!");
+                    points++;
                     Console.WriteLine("You now have " + points + " points!");
                 }
                 if (guess == "tails" && flip == 1)
                 {
                     Console.WriteLine("The coin landed on tails! You win!");
+                    points++;
                     Console.WriteLine("You now have " + points + " points!");
                 }
                 if (guess == "heads" && flip == 1)
@@ -51,6 +53,12 @@
                 if (points == 0)
                 {
                     Console.WriteLine("You loser. See you never!");
+                    done = true;
+                    break;
+                }
+                if (points == 5)
+                {
+                    Console.WriteLine("You broke the casino! That's a thing you did. You win fair and square.");
                     done = true;
                     break;
                 }
