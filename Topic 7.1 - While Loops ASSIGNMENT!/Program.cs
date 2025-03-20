@@ -57,7 +57,7 @@
                 Console.WriteLine("Would you like to continue?");
                 if (Console.ReadLine() == "no")
                 {
-                    Console.WriteLine("Coward.");
+                    Console.WriteLine("Coward. You had " + points + " left.");
                     done = true;
                 }
                 else
